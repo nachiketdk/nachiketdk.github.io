@@ -24,7 +24,351 @@
   <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
-  <link rel="stylesheet" type="text/css" href="stylesheet.css">
+  <style>
+    /* Base styles and variables */
+    :root {
+      --primary-color: #0074E1;
+      --secondary-color: #ff0066;
+      --text-color: #333;
+      --bg-color: #fff;
+      --link-color: #0074E1;
+      --link-hover-color: #ff0066;
+      --header-bg: #fff;
+      --border-color: #ddd;
+      --card-bg: #f9f9f9;
+    }
+
+    /* Dark mode variables */
+    .dark-mode {
+      --primary-color: #4da3ff;
+      --secondary-color: #ff4d8c;
+      --text-color: #e0e0e0;
+      --bg-color: #121212;
+      --link-color: #4da3ff;
+      --link-hover-color: #ff4d8c;
+      --header-bg: #1a1a1a;
+      --border-color: #444;
+      --card-bg: #1e1e1e;
+    }
+
+    /* Global styles */
+    body {
+      font-family: 'Poppins', sans-serif;
+      line-height: 1.6;
+      color: var(--text-color);
+      background-color: var(--bg-color);
+      transition: background-color 0.3s ease, color 0.3s ease;
+      margin: 0;
+      padding: 0;
+    }
+
+    a {
+      color: var(--link-color);
+      text-decoration: none;
+      transition: color 0.2s ease;
+    }
+
+    a:focus,
+    a:hover {
+      color: var(--link-hover-color);
+      text-decoration: none;
+    }
+
+    td, th, tr, p, a {
+      font-family: 'Poppins', sans-serif;
+      font-size: 14px;
+      line-height: 1.5;
+    }
+
+    strong {
+      font-family: 'Poppins', sans-serif;
+      font-size: 14px;
+    }
+
+    heading {
+      font-family: 'Poppins', sans-serif;
+      font-size: 22px;
+      color: var(--text-color);
+      margin-bottom: 15px;
+      display: block;
+    }
+
+    papertitle {
+      font-family: 'Poppins', sans-serif;
+      font-size: 14px;
+      font-weight: 700;
+      color: var(--text-color);
+    }
+
+    name {
+      font-family: 'Poppins', sans-serif;
+      font-size: 32px;
+      color: var(--text-color);
+    }
+
+    /* Header styles */
+    .header {
+      overflow: hidden;
+      background-color: var(--header-bg);
+      padding: 15px 20px;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+      width: 100%;
+      max-width: 800px;
+      margin: 0 auto;
+      box-sizing: border-box;
+      transition: background-color 0.3s ease;
+    }
+
+    /* Subtle header for single page design */
+    .subtle-header {
+      display: flex;
+      justify-content: flex-end;
+      padding: 15px 20px;
+      max-width: 800px;
+      margin: 0 auto;
+      transition: background-color 0.3s ease;
+    }
+
+    .header a {
+      float: left;
+      color: var(--link-color);
+      text-align: center;
+      padding: 12px;
+      text-decoration: none;
+      font-size: 14px;
+      border-radius: 4px;
+      transition: all 0.2s ease;
+    }
+
+    .header a:hover {
+      background-color: rgba(0,0,0,0.05);
+      color: var(--link-hover-color);
+    }
+
+    .header a.active {
+      font-weight: bold;
+      border-bottom: 2px solid var(--primary-color);
+    }
+
+    .header-right {
+      float: right;
+      display: flex;
+      align-items: center;
+    }
+
+    #darkModeToggle {
+      background: none;
+      border: none;
+      color: var(--link-color);
+      cursor: pointer;
+      font-size: 16px;
+      padding: 8px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.2s ease;
+      width: 36px;
+      height: 36px;
+    }
+
+    #darkModeToggle:hover {
+      background-color: rgba(0,0,0,0.05);
+      color: var(--link-hover-color);
+    }
+
+    /* Main content styles */
+    main {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    /* Profile section */
+    .profile-section {
+      margin-bottom: 40px;
+    }
+
+    .profile-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 30px;
+      align-items: flex-start;
+    }
+
+    .profile-content {
+      flex: 1;
+      min-width: 300px;
+    }
+
+    .profile-header {
+      margin-bottom: 20px;
+    }
+
+    .profile-contact {
+      margin-top: 10px;
+      color: var(--text-color);
+      opacity: 0.8;
+    }
+
+    .profile-bio {
+      margin-bottom: 20px;
+    }
+
+    .profile-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 15px;
+      margin-top: 20px;
+    }
+
+    .social-link {
+      display: inline-flex;
+      align-items: center;
+      padding: 8px 12px;
+      background-color: var(--card-bg);
+      border-radius: 4px;
+      transition: all 0.2s ease;
+      border: 1px solid var(--border-color);
+    }
+
+    .social-link:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      background-color: var(--primary-color);
+      color: white;
+    }
+
+    .social-link i {
+      margin-right: 8px;
+    }
+
+    .profile-image {
+      flex: 0 0 250px;
+    }
+
+    .profile-photo {
+      width: 100%;
+      border-radius: 50%;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease;
+    }
+
+    .profile-photo:hover {
+      transform: scale(1.03);
+    }
+
+    /* Publication section */
+    .publications-section {
+      margin-top: 25px;
+    }
+
+    .publication {
+      margin-bottom: 20px;
+      padding: 16px;
+      border-radius: 8px;
+      transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.3s ease;
+      background-color: var(--card-bg);
+      border: 1px solid var(--border-color);
+    }
+
+    .publication:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+
+    .publication papertitle {
+      display: block;
+      margin-bottom: 8px;
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--text-color);
+    }
+
+    .publication-authors {
+      margin-bottom: 4px;
+      font-size: 14px;
+    }
+
+    .publication-venue {
+      margin-bottom: 12px;
+      font-size: 13px;
+      font-style: italic;
+      color: var(--text-color);
+      opacity: 0.8;
+    }
+
+    .publication-links {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+
+    /* Button styles */
+    a.button {
+      text-decoration: none;
+      border: none;
+      background-color: var(--primary-color);
+      color: white;
+      text-align: center;
+      display: inline-block;
+      cursor: pointer;
+      font-family: 'Poppins', sans-serif;
+      padding: 5px 10px;
+      border-radius: 4px;
+      margin: 0.3em;
+      transition: background-color 0.2s ease, transform 0.1s ease;
+    }
+
+    a.button:hover {
+      background-color: var(--secondary-color);
+      transform: translateY(-1px);
+    }
+
+    .publication-links a.button {
+      font-size: 12px;
+      padding: 4px 8px;
+    }
+
+    /* Footer styles */
+    footer {
+      max-width: 800px;
+      margin: 20px auto;
+      padding: 10px 20px;
+      text-align: center;
+    }
+
+    footer hr {
+      border: 0;
+      height: 1px;
+      background-color: var(--border-color);
+      margin: 20px 0;
+    }
+
+    /* Responsive styles */
+    @media screen and (max-width: 768px) {
+      .profile-container {
+        flex-direction: column-reverse;
+      }
+
+      .profile-image {
+        margin: 0 auto 20px;
+      }
+
+      .header-right {
+        float: none;
+      }
+
+      .header a {
+        float: none;
+        display: block;
+        text-align: left;
+      }
+    }
+  </style>
 </head>
 
 
