@@ -1,238 +1,343 @@
-/* latin-ext */
-/*@font-face {
-  font-family: 'Lato';
-  font-style: italic;
-  font-weight: 400;
-  src: local('Lato Italic'), local('Lato-Italic'), url(https://fonts.gstatic.com/s/lato/v15/S6u8w4BMUTPHjxsAUi-qNiXg7eU0.woff2) format('woff2');
-  unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
-}*/
-/* latin */
-/*@font-face {
-  font-family: 'Lato';
-  font-style: italic;
-  font-weight: 400;
-  src: local('Lato Italic'), local('Lato-Italic'), url(https://fonts.gstatic.com/s/lato/v15/S6u8w4BMUTPHjxsAXC-qNiXg7Q.woff2) format('woff2');
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
-}*/
-/* latin-ext */
-/*@font-face {
-  font-family: 'Lato';
-  font-style: italic;
-  font-weight: 700;
-  src: local('Lato Bold Italic'), local('Lato-BoldItalic'), url(https://fonts.gstatic.com/s/lato/v15/S6u_w4BMUTPHjxsI5wq_FQftx9897sxZ.woff2) format('woff2');
-  unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
-}*/
-/* latin */
-/*@font-face {
-  font-family: 'Lato';
-  font-style: italic;
-  font-weight: 700;
-  src: local('Lato Bold Italic'), local('Lato-BoldItalic'), url(https://fonts.gstatic.com/s/lato/v15/S6u_w4BMUTPHjxsI5wq_Gwftx9897g.woff2) format('woff2');
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
-}*/
-/* latin-ext */
-/*@font-face {
-  font-family: 'Lato';
-  font-style: normal;
-  font-weight: 400;
-  src: local('Lato Regular'), local('Lato-Regular'), url(https://fonts.gstatic.com/s/lato/v15/S6uyw4BMUTPHjxAwXiWtFCfQ7A.woff2) format('woff2');
-  unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
-}*/
-/* latin */
-/*@font-face {
-  font-family: 'Lato';
-  font-style: normal;
-  font-weight: 400;
-  src: local('Lato Regular'), local('Lato-Regular'), url(https://fonts.gstatic.com/s/lato/v15/S6uyw4BMUTPHjx4wXiWtFCc.woff2) format('woff2');
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
-}*/
-/* latin-ext */
-/*@font-face {
-  font-family: 'Lato';
-  font-style: normal;
-  font-weight: 700;
-  src: local('Lato Bold'), local('Lato-Bold'), url(https://fonts.gstatic.com/s/lato/v15/S6u9w4BMUTPHh6UVSwaPGQ3q5d0N7w.woff2) format('woff2');
-  unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
-}*/
-/* latin */
-/*@font-face {
-  font-family: 'Lato';
-  font-style: normal;
-  font-weight: 700;
-  src: local('Lato Bold'), local('Lato-Bold'), url(https://fonts.gstatic.com/s/lato/v15/S6u9w4BMUTPHh6UVSwiPGQ3q5d0.woff2) format('woff2');
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
-}*/
+/* Base styles and variables */
+:root {
+  --primary-color: #0074E1;
+  --secondary-color: #ff0066;
+  --text-color: #333;
+  --bg-color: #fff;
+  --link-color: #0074E1;
+  --link-hover-color: #ff0066;
+  --header-bg: #fff;
+  --border-color: #ddd;
+  --card-bg: #f9f9f9;
+}
+
+/* Dark mode variables */
+.dark-mode {
+  --primary-color: #4da3ff;
+  --secondary-color: #ff4d8c;
+  --text-color: #e0e0e0;
+  --bg-color: #121212;
+  --link-color: #4da3ff;
+  --link-hover-color: #ff4d8c;
+  --header-bg: #1a1a1a;
+  --border-color: #444;
+  --card-bg: #1e1e1e;
+}
+
+/* Global styles */
+body {
+  font-family: 'Poppins', sans-serif;
+  line-height: 1.6;
+  color: var(--text-color);
+  background-color: var(--bg-color);
+  transition: background-color 0.3s ease, color 0.3s ease;
+  margin: 0;
+  padding: 0;
+}
 
 a {
-  color: #0074E1; /*#14A098;*/ /*#0074E1;*/
+  color: var(--link-color);
   text-decoration: none;
+  transition: color 0.2s ease;
 }
 
 a:focus,
 a:hover {
-  color: #ff0066;
+  color: var(--link-hover-color);
   text-decoration: none;
 }
 
-body,
-td,
-th,
-tr,
-p,
-a {
-  /*font-family: 'Libre Baskerville', serif;*/
-  font-family: 'Poppins', sans-serif; 
-  /*font-family: 'Source Serif Pro', serif;*/
+td, th, tr, p, a {
+  font-family: 'Poppins', sans-serif;
   font-size: 14px;
   line-height: 1.5;
 }
 
 strong {
-  /*font-family: 'Libre Baskerville', serif;*/
   font-family: 'Poppins', sans-serif;
-  /*font-family: 'Source Serif Pro', serif;*/
   font-size: 14px;
 }
 
 heading {
-  /*font-family: 'Libre Baskerville', serif;*/
-  font-family: 'Poppins', sans-serif; 
-  /*font-family: 'Source Serif Pro', serif;*/
+  font-family: 'Poppins', sans-serif;
   font-size: 22px;
+  color: var(--text-color);
+  margin-bottom: 15px;
+  display: block;
 }
 
 papertitle {
-  /*font-family: 'Libre Baskerville', serif;*/
-  font-family: 'Poppins', sans-serif; 
-  /*font-family: 'Source Serif Pro', serif;*/
+  font-family: 'Poppins', sans-serif;
   font-size: 14px;
-  font-weight: 700
+  font-weight: 700;
+  color: var(--text-color);
 }
 
 name {
-  /*font-family: 'Libre Baskerville', serif;*/
-  font-family: 'Poppins', sans-serif; 
-  /*font-family: 'Source Serif Pro', serif;*/
+  font-family: 'Poppins', sans-serif;
   font-size: 32px;
+  color: var(--text-color);
 }
 
-.one {
-  width: 160px;
-  height: 160px;
-  position: relative;
-}
-
-.two {
-  width: 160px;
-  height: 160px;
-  position: absolute;
-  transition: opacity .2s ease-in-out;
-  -moz-transition: opacity .2s ease-in-out;
-  -webkit-transition: opacity .2s ease-in-out;
-}
-
-.fade {
-  transition: opacity .2s ease-in-out;
-  -moz-transition: opacity .2s ease-in-out;
-  -webkit-transition: opacity .2s ease-in-out;
-}
-
-span.highlight {
-  background-color: #ffffd0;
-}
-
+/* Header styles */
 .header {
   overflow: hidden;
-  background-color: white;
-  padding: 10px 10px;
+  background-color: var(--header-bg);
+  padding: 15px 20px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+  box-sizing: border-box;
+  transition: background-color 0.3s ease;
 }
 
-/* Style the header links */
+/* Subtle header for single page design */
+.subtle-header {
+  display: flex;
+  justify-content: flex-end;
+  padding: 15px 20px;
+  max-width: 800px;
+  margin: 0 auto;
+  transition: background-color 0.3s ease;
+}
+
 .header a {
   float: left;
-  color: #0074E1;
+  color: var(--link-color);
   text-align: center;
   padding: 12px;
   text-decoration: none;
   font-size: 14px;
-  /*line-height: 25px;*/
   border-radius: 4px;
+  transition: all 0.2s ease;
 }
 
-/* Style the logo link (notice that we set the same value of line-height and font-size to prevent the header to increase when the font gets bigger */
-.header a.logo {
-  font-size: 25px;
-  font-weight: bold;
-}
-
-/* Change the background color on mouse-over */
 .header a:hover {
-  background-color: white;
-  color: #ff0066;
+  background-color: rgba(0,0,0,0.05);
+  color: var(--link-hover-color);
 }
 
-/* Style the active/current link*/
-/*.header a.active {
-  background-color: white;
-  color: #0074E1;
-}*/
+.header a.active {
+  font-weight: bold;
+  border-bottom: 2px solid var(--primary-color);
+}
 
-/* Float the link section to the right */
 .header-right {
   float: right;
+  display: flex;
+  align-items: center;
 }
 
+#darkModeToggle {
+  background: none;
+  border: none;
+  color: var(--link-color);
+  cursor: pointer;
+  font-size: 16px;
+  padding: 8px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+  width: 36px;
+  height: 36px;
+}
 
+#darkModeToggle:hover {
+  background-color: rgba(0,0,0,0.05);
+  color: var(--link-hover-color);
+}
+
+/* Main content styles */
+main {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Profile section */
+.profile-section {
+  margin-bottom: 40px;
+}
+
+.profile-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  align-items: flex-start;
+}
+
+.profile-content {
+  flex: 1;
+  min-width: 300px;
+}
+
+.profile-header {
+  margin-bottom: 20px;
+}
+
+.profile-contact {
+  margin-top: 10px;
+  color: var(--text-color);
+  opacity: 0.8;
+}
+
+.profile-bio {
+  margin-bottom: 20px;
+}
+
+.profile-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.social-link {
+  display: inline-flex;
+  align-items: center;
+  padding: 8px 12px;
+  background-color: var(--card-bg);
+  border-radius: 4px;
+  transition: all 0.2s ease;
+  border: 1px solid var(--border-color);
+}
+
+.social-link:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  background-color: var(--primary-color);
+  color: white;
+}
+
+.social-link i {
+  margin-right: 8px;
+}
+
+.profile-image {
+  flex: 0 0 250px;
+}
+
+.profile-photo {
+  width: 100%;
+  border-radius: 50%;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+
+.profile-photo:hover {
+  transform: scale(1.03);
+}
+
+/* Publication section */
+.publications-section {
+  margin-top: 25px;
+}
+
+.publication {
+  margin-bottom: 20px;
+  padding: 16px;
+  border-radius: 8px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.3s ease;
+  background-color: var(--card-bg);
+  border: 1px solid var(--border-color);
+}
+
+.publication:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.publication papertitle {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text-color);
+}
+
+.publication-authors {
+  margin-bottom: 4px;
+  font-size: 14px;
+}
+
+.publication-venue {
+  margin-bottom: 12px;
+  font-size: 13px;
+  font-style: italic;
+  color: var(--text-color);
+  opacity: 0.8;
+}
+
+.publication-links {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+/* Button styles */
 a.button {
-    -webkit-appearance: button;
-    -moz-appearance: button;
-    appearance: button;
-
-    text-decoration: none;
-    border: none;
-    background-color: #0074E1;
-    color: white;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    cursor: pointer;
-    font-family:'Poppins',sans-serif;
-    /*border-padding:10px;*/
-    padding-left: 5px;
-    padding-right: 5px;
-    padding-top:1px;
-    padding-bottom:1px;
-    border-radius: 8%/16%;
-    margin:0.3e, 0.3em 0.3em 0.3em;
+  text-decoration: none;
+  border: none;
+  background-color: var(--primary-color);
+  color: white;
+  text-align: center;
+  display: inline-block;
+  cursor: pointer;
+  font-family: 'Poppins', sans-serif;
+  padding: 5px 10px;
+  border-radius: 4px;
+  margin: 0.3em;
+  transition: background-color 0.2s ease, transform 0.1s ease;
 }
 
-button.button1{
-  background-color:#FFFFFF;
-  border:none;
-  color: #0074E1;
-  text-decoration:none;
-  font-family:'Poppins',sans-serif;
-  /*padding-left:2px;*/
-  /*padding-left:0.2em 0.35em;*/
-  margin:0 0.3em 0.3em 0;
-}
-button.button1:hover{
-  color:#ff0066;
-  /*background-color:#0074E1;  */
-  /*padding:0.2em 0.35em;*/
-  margin:0 0.3em 0.3em 0;
-  border-radius:0.5em;
-  cursor: pointer; 
+a.button:hover {
+  background-color: var(--secondary-color);
+  transform: translateY(-1px);
 }
 
-/* Add media queries for responsiveness - when the screen is 500px wide or less, stack the links on top of each other */
-@media screen and (max-width: 500px) {
+.publication-links a.button {
+  font-size: 12px;
+  padding: 4px 8px;
+}
+
+/* Footer styles */
+footer {
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 10px 20px;
+  text-align: center;
+}
+
+footer hr {
+  border: 0;
+  height: 1px;
+  background-color: var(--border-color);
+  margin: 20px 0;
+}
+
+/* Responsive styles */
+@media screen and (max-width: 768px) {
+  .profile-container {
+    flex-direction: column-reverse;
+  }
+
+  .profile-image {
+    margin: 0 auto 20px;
+  }
+
+  .header-right {
+    float: none;
+  }
+
   .header a {
     float: none;
     display: block;
     text-align: left;
-  }
-  .header-right {
-    float: none;
   }
 }
