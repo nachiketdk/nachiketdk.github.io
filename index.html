@@ -25,21 +25,8 @@
 
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
   <style>
-    /* Base styles and variables */
+    /* Base styles and variables - now using dark mode as default */
     :root {
-      --primary-color: #0074E1;
-      --secondary-color: #ff0066;
-      --text-color: #333;
-      --bg-color: #fff;
-      --link-color: #0074E1;
-      --link-hover-color: #ff0066;
-      --header-bg: #fff;
-      --border-color: #ddd;
-      --card-bg: #f9f9f9;
-    }
-
-    /* Dark mode variables */
-    .dark-mode {
       --primary-color: #4da3ff;
       --secondary-color: #ff4d8c;
       --text-color: #e0e0e0;
@@ -49,6 +36,19 @@
       --header-bg: #1a1a1a;
       --border-color: #444;
       --card-bg: #1e1e1e;
+    }
+
+    /* Light mode variables - now for the toggle */
+    .light-mode {
+      --primary-color: #0074E1;
+      --secondary-color: #ff0066;
+      --text-color: #333;
+      --bg-color: #fff;
+      --link-color: #0074E1;
+      --link-hover-color: #ff0066;
+      --header-bg: #fff;
+      --border-color: #ddd;
+      --card-bg: #f9f9f9;
     }
 
     /* Global styles */
@@ -248,6 +248,7 @@
 
     .profile-image {
       flex: 0 0 250px;
+      margin-top: 65px;
     }
 
     .profile-photo {
@@ -355,7 +356,7 @@
       }
 
       .profile-image {
-        margin: 0 auto 20px;
+        margin: 0 50px 20px;
       }
 
       .header-right {
@@ -387,7 +388,7 @@
   <!-- Simple subtle header -->
   <div class="subtle-header">
     <button id="darkModeToggle" aria-label="Toggle dark mode">
-      <i class="fas fa-moon"></i>
+      <i class="fas fa-sun"></i>
     </button>
   </div>
 
@@ -399,7 +400,7 @@
             <name>Nachiket Kotalwar</name>
             <div class="profile-contact">
               <p>
-                <i class="fas fa-envelope"></i> nkotalwa [at] mpi-sws [dot] org<br>
+                <i class="fas fa-envelope"></i> nkotalwa [at] cs [dot] cmu [dot] edu<br>
                 <i class="fas fa-envelope"></i> nachiketkotalwar [at] outlook [dot] com
               </p>
             </div>
@@ -492,24 +493,24 @@
     const body = document.body;
     const icon = darkModeToggle.querySelector('i');
 
-    // Check for saved theme preference or use preferred color scheme
+    // Check for saved theme preference or use dark mode as default
     const savedTheme = localStorage.getItem('theme');
-    if (savedTheme === 'dark' || (!savedTheme && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
-      body.classList.add('dark-mode');
-      icon.classList.replace('fa-moon', 'fa-sun');
+    if (savedTheme === 'light') {
+      body.classList.add('light-mode');
+      icon.classList.replace('fa-sun', 'fa-moon');
     }
 
     // Toggle dark mode on button click
     darkModeToggle.addEventListener('click', () => {
-      body.classList.toggle('dark-mode');
+      body.classList.toggle('light-mode');
 
       // Toggle icon
-      if (body.classList.contains('dark-mode')) {
-        icon.classList.replace('fa-moon', 'fa-sun');
-        localStorage.setItem('theme', 'dark');
-      } else {
+      if (body.classList.contains('light-mode')) {
         icon.classList.replace('fa-sun', 'fa-moon');
         localStorage.setItem('theme', 'light');
+      } else {
+        icon.classList.replace('fa-moon', 'fa-sun');
+        localStorage.setItem('theme', 'dark');
       }
     });
   </script>
