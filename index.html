@@ -25,21 +25,8 @@
 
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
   <style>
-    /* Base styles and variables - now using dark mode as default */
+    /* Base styles and variables - now using light mode as default */
     :root {
-      --primary-color: #4da3ff;
-      --secondary-color: #ff4d8c;
-      --text-color: #e0e0e0;
-      --bg-color: #121212;
-      --link-color: #4da3ff;
-      --link-hover-color: #ff4d8c;
-      --header-bg: #1a1a1a;
-      --border-color: #444;
-      --card-bg: #1e1e1e;
-    }
-
-    /* Light mode variables - now for the toggle */
-    .light-mode {
       --primary-color: #0074E1;
       --secondary-color: #ff0066;
       --text-color: #333;
@@ -49,6 +36,19 @@
       --header-bg: #fff;
       --border-color: #ddd;
       --card-bg: #f9f9f9;
+    }
+
+    /* Dark mode variables - now for the toggle */
+    .dark-mode {
+      --primary-color: #4da3ff;
+      --secondary-color: #ff4d8c;
+      --text-color: #e0e0e0;
+      --bg-color: #121212;
+      --link-color: #4da3ff;
+      --link-hover-color: #ff4d8c;
+      --header-bg: #1a1a1a;
+      --border-color: #444;
+      --card-bg: #1e1e1e;
     }
 
     /* Global styles */
@@ -388,7 +388,7 @@
   <!-- Simple subtle header -->
   <div class="subtle-header">
     <button id="darkModeToggle" aria-label="Toggle dark mode">
-      <i class="fas fa-sun"></i>
+      <i class="fas fa-moon"></i>
     </button>
   </div>
 
@@ -493,24 +493,24 @@
     const body = document.body;
     const icon = darkModeToggle.querySelector('i');
 
-    // Check for saved theme preference or use dark mode as default
+    // Check for saved theme preference or use light mode as default
     const savedTheme = localStorage.getItem('theme');
-    if (savedTheme === 'light') {
-      body.classList.add('light-mode');
-      icon.classList.replace('fa-sun', 'fa-moon');
+    if (savedTheme === 'dark') {
+      body.classList.add('dark-mode');
+      icon.classList.replace('fa-moon', 'fa-sun');
     }
 
     // Toggle dark mode on button click
     darkModeToggle.addEventListener('click', () => {
-      body.classList.toggle('light-mode');
+      body.classList.toggle('dark-mode');
 
       // Toggle icon
-      if (body.classList.contains('light-mode')) {
-        icon.classList.replace('fa-sun', 'fa-moon');
-        localStorage.setItem('theme', 'light');
-      } else {
+      if (body.classList.contains('dark-mode')) {
         icon.classList.replace('fa-moon', 'fa-sun');
         localStorage.setItem('theme', 'dark');
+      } else {
+        icon.classList.replace('fa-sun', 'fa-moon');
+        localStorage.setItem('theme', 'light');
       }
     });
   </script>
