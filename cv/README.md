@@ -37,7 +37,8 @@ The page arrangement is deliberate: page 1 contains contact information, educati
 - Teaching includes Foundations of Computational Data Science, CMU, Teaching Assistant, 2026.
 - Program committee service includes CHI 2027.
 - Research Mentoring lists Partha Sarathi Purkayastha, ETH Zürich, and Rohini Das, Carnegie Mellon University. Dates and degree levels have not been supplied; do not infer them.
-- The Amazon entry uses the Trusted Software Agents challenge name, co-leadership of Carnegie Mellon University's team, selection among 10 university teams worldwide, and a $250K research grant. Omit the team name and AWS credits.
+- The Amazon entry uses the Trusted Software Agents challenge name, co-leadership of Carnegie Mellon University's team, selection among 10 university teams worldwide, and a $250,000 research grant. Omit the team name and AWS credits.
+- Write monetary amounts in full with comma separators: $250,000 for the research grant and $24,000 for the BITS Merit Scholarship. Do not abbreviate amounts with K.
 
 ## Review and release
 
