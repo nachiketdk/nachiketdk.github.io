@@ -1,564 +1,90 @@
-<!DOCTYPE HTML>
+<!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="UTF-8">
+  <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Nachiket Kotalwar</title>
   <meta name="author" content="Nachiket Kotalwar">
-  <meta name="description" content="Personal webpage of Nachiket Kotalwar.">
-  <meta name="keywords" content="Nachiket Kotalwar, research fellow, MPI-SWS, programming languages, machine learning, AI">
-  <meta name="theme-color" content="#0074E1">
+  <meta name="description" content="Nachiket Kotalwar, PhD student at Carnegie Mellon University. Research in human-AI interaction and the capabilities and reliability of AI agents.">
   <meta property="og:title" content="Nachiket Kotalwar">
-  <meta property="og:description" content="Personal webpage of Nachiket Kotalwar.">
+  <meta property="og:description" content="Nachiket Kotalwar, PhD student at Carnegie Mellon University. Research in human-AI interaction and the capabilities and reliability of AI agents.">
   <meta property="og:image" content="images/square_img.jpg">
-
-  <!-- Favicon -->
   <link rel="icon" href="favicon.ico" sizes="any">
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="favicon.svg">
   <link rel="manifest" href="favicon/site.webmanifest">
-
-  <link rel="preconnect" href="https://fonts.gstatic.com">
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
-
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
-  <style>
-    /* Base styles and variables - now using light mode as default */
-    :root {
-      --primary-color: #0074E1;
-      --secondary-color: #ff0066;
-      --text-color: #333;
-      --bg-color: #fff;
-      --link-color: #004bbc;
-      --link-hover-color: #ff0066;
-      --header-bg: #fff;
-      --border-color: #ddd;
-      --card-bg: #f9f9f9;
-    }
-
-    /* Dark mode variables - now for the toggle */
-    .dark-mode {
-      --primary-color: #4da3ff;
-      --secondary-color: #ff4d8c;
-      --text-color: #e0e0e0;
-      --bg-color: #121212;
-      --link-color: #4da3ff;
-      --link-hover-color: #ff4d8c;
-      --header-bg: #1a1a1a;
-      --border-color: #444;
-      --card-bg: #1e1e1e;
-    }
-
-    /* Global styles */
-    body {
-      font-family: 'Poppins', sans-serif;
-      line-height: 1.6;
-      color: var(--text-color);
-      background-color: var(--bg-color);
-      transition: background-color 0.3s ease, color 0.3s ease;
-      margin: 0;
-      padding: 0;
-    }
-
-    a {
-      color: var(--link-color);
-      text-decoration: none;
-      transition: color 0.2s ease;
-    }
-
-    a:focus,
-    a:hover {
-      color: var(--link-hover-color);
-      text-decoration: none;
-    }
-
-    td, th, tr, p, a {
-      font-family: 'Poppins', sans-serif;
-      font-size: 14px;
-      line-height: 1.5;
-    }
-
-    strong {
-      font-family: 'Poppins', sans-serif;
-      font-size: 14px;
-    }
-
-    heading {
-      font-family: 'Poppins', sans-serif;
-      font-size: 22px;
-      color: var(--text-color);
-      margin-bottom: 15px;
-      display: block;
-    }
-
-    papertitle {
-      font-family: 'Poppins', sans-serif;
-      font-size: 14px;
-      font-weight: 700;
-      color: var(--text-color);
-    }
-
-    name {
-      font-family: 'Poppins', sans-serif;
-      font-size: 32px;
-      color: var(--text-color);
-    }
-
-    /* Header styles */
-    .header {
-      overflow: hidden;
-      background-color: var(--header-bg);
-      padding: 15px 20px;
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-      width: 100%;
-      max-width: 800px;
-      margin: 0 auto;
-      box-sizing: border-box;
-      transition: background-color 0.3s ease;
-    }
-
-    /* Subtle header for single page design */
-    .subtle-header {
-      display: flex;
-      justify-content: flex-end;
-      padding: 15px 20px;
-      max-width: 800px;
-      margin: 0 auto;
-      transition: background-color 0.3s ease;
-    }
-
-    .header a {
-      float: left;
-      color: var(--link-color);
-      text-align: center;
-      padding: 12px;
-      text-decoration: none;
-      font-size: 14px;
-      border-radius: 4px;
-      transition: all 0.2s ease;
-    }
-
-    .header a:hover {
-      background-color: rgba(0,0,0,0.05);
-      color: var(--link-hover-color);
-    }
-
-    .header a.active {
-      font-weight: bold;
-      border-bottom: 2px solid var(--primary-color);
-    }
-
-    .header-right {
-      float: right;
-      display: flex;
-      align-items: center;
-    }
-
-    #darkModeToggle {
-      background: none;
-      border: none;
-      color: var(--link-color);
-      cursor: pointer;
-      font-size: 16px;
-      padding: 8px;
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      transition: all 0.2s ease;
-      width: 36px;
-      height: 36px;
-    }
-
-    #darkModeToggle:hover {
-      background-color: rgba(0,0,0,0.05);
-      color: var(--link-hover-color);
-    }
-
-    /* Main content styles */
-    main {
-      max-width: 800px;
-      margin: 0 auto;
-      padding: 20px;
-    }
-
-    /* Profile section */
-    .profile-section {
-      margin-bottom: 40px;
-    }
-
-    .profile-container {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 30px;
-      align-items: flex-start;
-    }
-
-    .profile-content {
-      flex: 1;
-      min-width: 300px;
-    }
-
-    .profile-header {
-      margin-bottom: 20px;
-    }
-
-    .profile-contact {
-      margin-top: 10px;
-      color: var(--text-color);
-      opacity: 0.8;
-    }
-
-    .profile-bio {
-      margin-bottom: 20px;
-    }
-
-    .profile-links {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 15px;
-      margin-top: 20px;
-    }
-
-    .social-link {
-      display: inline-flex;
-      align-items: center;
-      padding: 8px 12px;
-      background-color: var(--card-bg);
-      border-radius: 4px;
-      transition: all 0.2s ease;
-      border: 1px solid var(--border-color);
-    }
-
-    .social-link:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-      background-color: var(--primary-color);
-      color: white;
-    }
-
-    .social-link i {
-      margin-right: 8px;
-    }
-
-    .profile-image {
-      flex: 0 0 250px;
-      margin-top: 65px;
-    }
-
-    .profile-photo {
-      width: 100%;
-      border-radius: 50%;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-      transition: transform 0.3s ease;
-    }
-
-    .profile-photo:hover {
-      transform: scale(1.03);
-    }
-
-    /* Publication section */
-    .publications-section {
-      margin-top: 25px;
-    }
-
-    .publication {
-      margin-bottom: 20px;
-      padding: 16px;
-      border-radius: 8px;
-      transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.3s ease;
-      background-color: var(--card-bg);
-      border: 1px solid var(--border-color);
-    }
-
-    .publication:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    }
-
-    .publication papertitle {
-      display: block;
-      margin-bottom: 8px;
-      font-size: 14px;
-      font-weight: 600;
-      color: var(--text-color);
-    }
-
-    .publication-authors {
-      margin-bottom: 4px;
-      font-size: 14px;
-    }
-
-    .publication-venue {
-      margin-bottom: 8px;
-      font-size: 13px;
-      font-style: italic;
-      color: var(--text-color);
-      opacity: 0.8;
-    }
-
-    .publication-links {
-      display: flex;
-      gap: 8px;
-      flex-wrap: wrap;
-    }
-
-    /* Button styles */
-    a.button {
-      text-decoration: none;
-      border: none;
-      background-color: var(--primary-color);
-      color: white;
-      text-align: center;
-      display: inline-block;
-      cursor: pointer;
-      font-family: 'Poppins', sans-serif;
-      padding: 3px 6px;
-      border-radius: 4px;
-      margin: 0.3em;
-      transition: background-color 0.2s ease, transform 0.1s ease;
-    }
-
-    a.button:hover {
-      background-color: var(--secondary-color);
-      transform: translateY(-1px);
-    }
-
-    .publication-links a.button {
-      font-size: 12px;
-      padding: 4px 8px;
-    }
-
-    /* Footer styles */
-    footer {
-      max-width: 800px;
-      margin: 20px auto;
-      padding: 10px 20px;
-      text-align: center;
-    }
-
-    footer hr {
-      border: 0;
-      height: 1px;
-      background-color: var(--border-color);
-      margin: 20px 0;
-    }
-
-    /* Responsive styles */
-    @media screen and (max-width: 768px) {
-      .profile-container {
-        flex-direction: column-reverse;
-      }
-
-      .profile-image {
-        margin: 0 50px 20px;
-      }
-
-      .header-right {
-        float: none;
-      }
-
-      .header a {
-        float: none;
-        display: block;
-        text-align: left;
-      }
-    }
-  </style>
+  <link rel="stylesheet" href="style.css">
+  <script src="theme.js" defer></script>
 </head>
-
-
 <body>
-  <!-- Original header (commented out for future use)
-  <header class="header">
-    <div class="header-right">
-      <a href="index.html" class="active"><b>Home</b></a>
-      <a href="teaching.html"><b>Teaching</b></a>
-      <a href="service.html"><b>Service</b></a>
-      <a href="bio.html"><b>Bio</b></a>
-    </div>
-  </header>
-  -->
+  <div class="site-shell">
+    <nav class="site-nav" aria-label="Main navigation">
+      <a href="index.html" aria-current="page">Home</a>
+      <a href="publications.html">Publications</a>
+      <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Switch to dark mode" aria-pressed="false">
+        <svg class="moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M20.9 13.3A9 9 0 0 1 10.7 3.1 9 9 0 1 0 20.9 13.3Z"/></svg>
+        <svg class="sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M2 12h2m16 0h2M4.9 4.9l1.4 1.4m11.4 11.4 1.4 1.4M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+      </button>
+    </nav>
+    <main>
+      <header class="profile-header">
+        <div>
+          <h1>Nachiket Kotalwar</h1>
+          <p class="affiliation">PhD student · Carnegie Mellon University</p>
+        </div>
+        <img class="portrait" src="images/square_img.jpg" width="150" height="150" alt="Nachiket Kotalwar">
+        <div class="profile-details">
+          <p class="contact"><a href="mailto:nkotalwa@cs.cmu.edu">nkotalwa@cs.cmu.edu</a></p>
+          <nav class="profile-links" aria-label="Profile links">
+            <a href="cv/Nachiket_Kotalwar_CV.pdf">CV</a>
+            <a href="https://scholar.google.com/citations?user=8ZbAeL8AAAAJ&amp;hl=en">Google Scholar</a>
+            <a href="https://github.com/nachiketdk">GitHub</a>
+            <a href="https://www.linkedin.com/in/nachiket-kotalwar">LinkedIn</a>
+          </nav>
+        </div>
+      </header>
 
-  <!-- Simple subtle header -->
-  <div class="subtle-header">
-    <button id="darkModeToggle" aria-label="Toggle dark mode">
-      <i class="fas fa-moon"></i>
-    </button>
+      <section class="bio" aria-label="About me">
+        <p>I am a PhD student at the <a href="https://lti.cs.cmu.edu/">Language Technologies Institute</a> at Carnegie Mellon University, advised by <a href="https://cp3a.github.io/">Prof. Carolyn Rosé</a>.</p>
+        <p>My research focuses on <strong>human-AI interaction</strong> and the <strong>capabilities and reliability of AI agents</strong>. My goal is to enable effective human-AI collaboration.</p>
+        <p>Previously, I was a pre-doctoral researcher at <a href="https://www.mpi-sws.org/">MPI-SWS</a>, advised by <a href="https://machineteaching.mpi-sws.org/adishsingla.html">Prof. Adish Singla</a>, working on personalized alignment and programming feedback.</p>
+      </section>
+
+      <section aria-labelledby="research-title">
+        <div class="section-heading">
+          <h2 id="research-title">Research</h2>
+          <a href="publications.html">All publications →</a>
+        </div>
+        <section class="research-area" id="human-ai-interaction" aria-labelledby="human-ai-title">
+          <h3 id="human-ai-title">Human-AI interaction.</h3>
+          <p class="area-description">I study how AI systems can adapt to people and provide useful assistance as they work. My research examines how to personalize responses with limited user input, how access to a person’s ongoing work informs when and how AI should help, and how people and agents coordinate in shared tasks. I build and evaluate interactive systems to investigate these questions.</p>
+          <ul class="paper-links" aria-label="Papers on human-AI interaction">
+            <li><a href="https://arxiv.org/abs/2610.26411" title="Exploring Visual Access and Proactive AI Tutoring for Handwritten Mathematics">Visual Access &amp; Proactive Tutoring</a> <span class="venue">(preprint, 2026)</span></li>
+            <li><a href="https://arxiv.org/abs/2606.18413" title="Searching for Synergy in Shared Workspace Human-AI Collaboration">Searching for Synergy</a> <span class="venue">(ICML 2026 Workshop)</span></li>
+            <li><a href="https://arxiv.org/abs/2511.02966" title="Inference-Time Personalized Alignment with a Few User Preference Queries">Inference-Time Personalized Alignment</a> <span class="venue">(NeurIPS 2025)</span></li>
+            <li><a href="https://educationaldatamining.org/EDM2025/proceedings/2025.EDM.short-papers.35/2025.EDM.short-papers.35.pdf" title="Humanizing Automated Programming Feedback: Fine-Tuning Generative Models with Student-Written Feedback">Humanizing Programming Feedback</a> <span class="venue">(EDM 2025)</span></li>
+            <li><a href="https://arxiv.org/abs/2406.05053" title="Hints-In-Browser: Benchmarking Language Models for Programming Feedback Generation">Hints-In-Browser</a> <span class="venue">(NeurIPS 2024)</span></li>
+          </ul>
+        </section>
+
+        <section class="research-area" id="agent-capabilities-and-reliability" aria-labelledby="agents-title">
+          <h3 id="agents-title">Agent capabilities and reliability.</h3>
+          <p class="area-description">I study how to build agents that solve complex tasks reliably. My work develops training methods for transferring skills to new tasks and agent systems that combine structured search, tool use, and verification through execution.</p>
+          <ul class="paper-links" aria-label="Papers on agent capabilities and reliability">
+            <li><a href="https://arxiv.org/abs/2602.16819" title="Hybrid-Gym: Training Coding Agents to Generalize Across Tasks">Hybrid-Gym</a> <span class="venue">(ICML 2026)</span></li>
+            <li><a href="https://openreview.net/forum?id=VLgFkLRUfV" title="Evaluating Code Slop in Long-Horizon Coding Agents">Code Slop</a> <span class="venue">(COLM 2026 Workshop)</span></li>
+            <li><a href="https://arxiv.org/abs/2610.31831" title="Ulysses: A Security Harness For Synthesizing Verifiable Web Exploits">Ulysses</a> <span class="venue">(preprint, 2026)</span></li>
+            <li><a href="https://arxiv.org/abs/2610.30184" title="Self-Evolving Static Analysis via LLM Pseudo-Labeling">Self-Evolving Static Analysis</a> <span class="venue">(preprint, 2026)</span></li>
+            <li><a href="https://arxiv.org/abs/2610.00977" title="ABSENTIA: Detecting Broken Access Control Vulnerabilities in Web Applications">ABSENTIA</a> <span class="venue">(preprint, 2026)</span></li>
+          </ul>
+        </section>
+        <p>Applications of my work include AI-assisted software engineering and STEM education.</p>
+      </section>
+    </main>
+    <footer>
+      <span>© 2026 Nachiket Kotalwar</span>
+      <a href="cv/Nachiket_Kotalwar_CV.pdf">Curriculum vitae</a>
+    </footer>
   </div>
-
-  <main>
-    <section class="profile-section">
-      <div class="profile-container">
-        <div class="profile-content">
-          <div class="profile-header">
-            <name>Nachiket Kotalwar</name>
-            <div class="profile-contact">
-              <p>
-                <i class="fas fa-envelope"></i> nachiketdk [at] cmu [dot] edu<br>
-                <i class="fas fa-envelope"></i> nachiketkotalwar [at] outlook [dot] com
-              </p>
-            </div>
-          </div>
-
-          <div class="profile-bio">
-            <p>
-              Hello! I am a PhD student at the <a href="https://lti.cs.cmu.edu/">Language Technologies Institute</a> at <b>Carnegie Mellon University</b>, advised by <a href="https://cp3a.github.io/">Prof. Carolyn Rosé</a>.
-            </p>
-            <p>
-              My research focuses on aligning AI systems to work better for and with humans. I study methods that help models learn from feedback, adapt to changing user and task contexts, and coordinate effectively in interactive settings. My work spans AI for code, STEM education, human-AI collaboration, and AI-assisted scientific research.
-            </p>
-            <p>
-              Previously, I was a pre-doctoral researcher at the <a href="https://www.mpi-sws.org/">Max Planck Institute for Software Systems (MPI-SWS)</a>, advised by <a href="https://machineteaching.mpi-sws.org/adishsingla.html">Prof. Adish Singla</a>, where I worked on human-feedback-driven alignment of language models for personalization and programming feedback.
-            </p>
-              
-            <!-- </p>
-
-            <p> -->
-              <!-- I graduated with a Bachelor's in Computer Science in the summer of 2024, from the
-              <a href="https://www.bits-pilani.ac.in/">Birla Institute of Technology and Science (BITS) Pilani, India</a>. -->
-    
-        
-          </div>
-
-          <div class="profile-links">
-            <a href="https://drive.google.com/file/d/1vojjn55GX9ju7JRrQ2VI8dndZJA_S3Ni/view?usp=sharing" class="social-link">
-              <i class="fas fa-file-alt"></i> <span>CV</span>
-            </a>
-            <a href="https://scholar.google.com/citations?user=8ZbAeL8AAAAJ&hl=en" class="social-link">
-              <i class="fas fa-graduation-cap"></i> <span>Google Scholar</span>
-            </a>
-            <a href="https://github.com/nachiketdk" class="social-link">
-              <i class="fab fa-github"></i> <span>GitHub</span>
-            </a>
-            <a href="https://www.linkedin.com/in/nachiket-kotalwar" class="social-link">
-              <i class="fab fa-linkedin"></i> <span>LinkedIn</span>
-            </a>
-          </div>
-        </div>
-
-        <div class="profile-image">
-          <img src="images/square_img.jpg" alt="Nachiket Kotalwar" class="profile-photo">
-        </div>
-      </div>
-    </section>
-
-    <section class="publications-section">
-      <heading><b>Selected Publications</b></heading>
-      <!-- <p>For the most up-to-date list of publications, please see <a href="https://scholar.google.com/citations?user=8ZbAeL8AAAAJ&hl=en">google scholar</a>.</p> -->
-      <!-- <p><i>* indicates equal contribution and co-authorship.</i></p> -->
-
-      <div class="publication">
-        <papertitle>Hybrid-Gym: Training Coding Agents to Generalize Across Tasks</papertitle>
-        <div class="publication-authors">
-          Y Xie, E Liu, G Zhang, <b>N Kotalwar</b>, S Gandhi, S Acharya, X Wang, C Rosé, G Neubig, D Fried
-        </div>
-        <div class="publication-venue">
-          <em>International Conference on Machine Learning (<b>ICML</b>)</em>, 2026
-        </div>
-        <div class="publication-links">
-          <a class="button" href="https://arxiv.org/pdf/2602.16819"><i class="fas fa-file-pdf"></i> Paper</a>
-          <a class="button" href="https://github.com/Hybrid-Gym/Hybrid-Gym"><i class="fas fa-code"></i> Code</a>
-        </div>
-      </div>
-
-      <div class="publication">
-        <papertitle>Searching for Synergy in Shared Workspace Human-AI Collaboration</papertitle>
-        <div class="publication-authors">
-          <b>N Kotalwar</b>, R Das, C Rosé
-        </div>
-        <div class="publication-venue">
-          <em>ICML Workshop on Human-AI Co-Creativity</em>, 2026
-        </div>
-        <div class="publication-links">
-          <a class="button" href="https://arxiv.org/pdf/2606.18413"><i class="fas fa-file-pdf"></i> Paper</a>
-        </div>
-      </div>
-
-      <div class="publication">
-        <papertitle>Inference-Time Personalized Alignment with a Few User Preference Queries</papertitle>
-        <div class="publication-authors">
-          VA Pădurean, P Kamalaruban, <b>N Kotalwar</b>, A Gotovos, A Singla
-        </div>
-        <div class="publication-venue">
-          <em>Neural Information Processing Systems (<b>NeurIPS</b>)</em>, 2025 
-        </div>
-        <div class="publication-links">
-          <a class="button" href="https://arxiv.org/pdf/2511.02966"><i class="fas fa-file-pdf"></i> Paper</a>
-        </div>
-      </div>
-
-
-      <div class="publication">
-        <papertitle>Humanizing Automated Programming Feedback: Fine-Tuning Generative Models with Student-Written Feedback</papertitle>
-        <div class="publication-authors">
-          VA Pădurean, T Phung, <b>N Kotalwar</b>, M Liut, J Leinonen, P Denny, A Singla
-        </div>
-        <div class="publication-venue">
-          <em>Educational Data Mining (<b>EDM</b>)</em>, 2025
-        </div>
-        <div class="publication-links">
-          <a class="button" href="https://educationaldatamining.org/EDM2025/proceedings/2025.EDM.short-papers.35/2025.EDM.short-papers.35.pdf"><i class="fas fa-file-pdf"></i> Paper</a>
-          <a class="button" href="https://github.com/machine-teaching-group/edm2025-humanizing-feedback"><i class="fas fa-code"></i> Code</a>
-        </div>
-      </div>
-      
-      <div class="publication">
-        <papertitle>Hints-In-Browser: Benchmarking Language Models for Programming Feedback Generation</papertitle>
-        <div class="publication-authors">
-          <b>N Kotalwar</b>, A Gotovos, A Singla
-        </div>
-        <div class="publication-venue">
-          <em>Neural Information Processing Systems (<b>NeurIPS</b>) Datasets & Benchmarks Track</em>, 2024
-        </div>
-        <div class="publication-links">
-          <a class="button" href="https://arxiv.org/pdf/2406.05053"><i class="fas fa-file-pdf"></i> Paper</a>
-          <a class="button" href="https://github.com/machine-teaching-group/neurips2024-hints-in-browser-finetuning"><i class="fas fa-code"></i> Code</a>
-          <a class="button" href="https://hints-in-browser.netlify.app/"><i class="fas fa-desktop"></i> Demo</a>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <footer>
-    <hr>
-    <p align="center" style="font-size:small;color:grey;">
-      © 2026 Nachiket Kotalwar
-    </p>
-  </footer>
-
-  <script>
-    // Dark mode toggle functionality
-    const darkModeToggle = document.getElementById('darkModeToggle');
-    const body = document.body;
-    const icon = darkModeToggle.querySelector('i');
-
-    // Check for saved theme preference or use light mode as default
-    const savedTheme = localStorage.getItem('theme');
-    if (savedTheme === 'dark') {
-      body.classList.add('dark-mode');
-      icon.classList.replace('fa-moon', 'fa-sun');
-    }
-
-    // Toggle dark mode on button click
-    darkModeToggle.addEventListener('click', () => {
-      body.classList.toggle('dark-mode');
-
-      // Toggle icon
-      if (body.classList.contains('dark-mode')) {
-        icon.classList.replace('fa-moon', 'fa-sun');
-        localStorage.setItem('theme', 'dark');
-      } else {
-        icon.classList.replace('fa-sun', 'fa-moon');
-        localStorage.setItem('theme', 'light');
-      }
-    });
-  </script>
 </body>
-
 </html>

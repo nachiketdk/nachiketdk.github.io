@@ -1,0 +1,3 @@
+build/
+# Historical reference files remain local; the current source and PDFs are tracked.
+archive/

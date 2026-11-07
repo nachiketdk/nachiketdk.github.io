@@ -1,0 +1,157 @@
+% Canonical CV source, finalized 2026-11-07. See README.md before editing.
+% Keep paper author order unchanged. Preprints: own first-authored work first.
+% Publications: newest year first; full conferences before workshops within a year.
+\documentclass[11pt,a4paper]{article}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern}
+\renewcommand{\familydefault}{\sfdefault}
+\usepackage[margin=15mm,top=14mm,bottom=16mm]{geometry}
+\usepackage{xcolor,microtype,tabularx,needspace,titlesec,fancyhdr,lastpage}
+\definecolor{accent}{HTML}{245477}
+\definecolor{muted}{HTML}{4D555D}
+\definecolor{rulecolor}{HTML}{BFCBD4}
+\usepackage[colorlinks=true,urlcolor=accent,linkcolor=accent,pdfauthor={Nachiket Kotalwar},pdftitle={Nachiket Kotalwar - Curriculum Vitae}]{hyperref}
+\urlstyle{same}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0pt}
+\setlength{\tabcolsep}{0pt}
+\renewcommand{\baselinestretch}{1.02}
+\titleformat{\section}{\large\bfseries\color{accent}}{}{0pt}{}[{\vspace{-3pt}\color{rulecolor}\titlerule[0.35pt]}]
+\titlespacing*{\section}{0pt}{10pt}{5pt}
+\pagestyle{fancy}
+\fancyhf{}
+\renewcommand{\headrulewidth}{0pt}
+\fancyfoot[L]{\small\color{muted}Nachiket Kotalwar}
+\fancyfoot[R]{\small\color{muted}\thepage\,/\,\pageref*{LastPage}}
+\setlength{\footskip}{20pt}
+\newcommand{\dated}[2]{\begin{tabularx}{\linewidth}{@{}X@{\hspace{12pt}}r@{}}\textbf{#1}&{#2}\end{tabularx}\par}
+\newenvironment{entry}{\par\addvspace{4pt}\begin{minipage}{\linewidth}}{\end{minipage}\par}
+\newcommand{\paper}[4]{\begin{entry}\href{#1}{\textbf{#2}}\par #3\par\textit{#4}\end{entry}\vspace{4pt}}
+\newcommand{\teaching}[2]{\begin{tabularx}{\linewidth}{@{}X@{\hspace{12pt}}r@{}}#1&#2\end{tabularx}\par\vspace{2pt}}
+\begin{document}
+{\fontsize{26}{29}\selectfont\bfseries Nachiket Kotalwar}\par\vspace{5pt}
+\href{mailto:nkotalwa@cs.cmu.edu}{nkotalwa@cs.cmu.edu}\enspace\textcolor{muted}{\textbar}\enspace
+\href{https://nachiketdk.github.io}{nachiketdk.github.io}\enspace\textcolor{muted}{\textbar}\enspace
+\href{https://scholar.google.com/citations?hl=en&user=8ZbAeL8AAAAJ}{Google Scholar}\enspace\textcolor{muted}{\textbar}\enspace
+\href{https://github.com/nachiketdk}{GitHub}\enspace\textcolor{muted}{\textbar}\enspace
+\href{https://www.linkedin.com/in/nachiket-kotalwar}{LinkedIn}
+
+\section*{Education}
+\begin{entry}
+\dated{Carnegie Mellon University}{2025 -- Present}
+Ph.D. student, Language Technologies Institute, School of Computer Science\par
+Advisor: Prof. Carolyn Ros\'{e}\enspace\textcolor{muted}{\textbar}\enspace GPA: 4.06/4
+\end{entry}
+\begin{entry}
+\dated{Birla Institute of Technology and Science (BITS), Pilani}{2020 -- 2024}
+B.E. Computer Science, India\enspace\textcolor{muted}{\textbar}\enspace GPA: 9.9/10
+\end{entry}
+
+\section*{Research Interests}
+I study human-AI interaction and the capabilities and reliability of AI agents. My goal is to enable effective human-AI collaboration. Applications of my work include AI-assisted software engineering and STEM education.
+
+\section*{Experience}
+\begin{entry}
+\dated{Graduate Research Assistant, Carnegie Mellon University}{2025 -- Present}
+Learning, personalization, and coordination for effective human-AI collaboration.
+\end{entry}
+\begin{entry}
+\dated{Pre-doctoral Researcher, Max Planck Institute for Software Systems}{2024 -- 2025}
+Human-feedback-driven alignment of language models for personalization and programming feedback.
+\end{entry}
+\begin{entry}
+\dated{Research Intern, Max Planck Institute for Software Systems}{2022 -- 2023}
+K-12 programming education platform design, classroom deployment, and education research support.
+\end{entry}
+\begin{entry}
+\dated{Software Engineering Intern, Google}{2023}
+Monitoring infrastructure for Google Cloud storage backup systems.
+\end{entry}
+
+\section*{Preprints}
+\paper{https://arxiv.org/abs/2610.26411}
+{Exploring Visual Access and Proactive AI Tutoring for Handwritten Mathematics}
+{\textbf{N. Kotalwar}, C. Borchers, S. Gandhi, P. S. Purkayastha, D. Yaron, C. P. Ros\'{e}.}
+{arXiv:2610.26411\enspace\textperiodcentered\enspace 2026}
+\paper{https://arxiv.org/abs/2610.31831}
+{Ulysses: A Security Harness For Synthesizing Verifiable Web Exploits}
+{A. Oke, A. V. Duarte, R. Melo, S. Gandhi, \textbf{N. Kotalwar}, C. Khandor, D. Wang, C. Ros\'{e}, L. Li.}
+{arXiv:2610.31831\enspace\textperiodcentered\enspace 2026}
+\paper{https://arxiv.org/abs/2610.30184}
+{Self-Evolving Static Analysis via LLM Pseudo-Labeling}
+{R. Melo, A. Duarte, A. Oke, S. Gandhi, \textbf{N. Kotalwar}, R. Abreu, L. Li, C. Ros\'{e}.}
+{arXiv:2610.30184\enspace\textperiodcentered\enspace 2026}
+\paper{https://arxiv.org/abs/2610.00977}
+{ABSENTIA: Detecting Broken Access Control Vulnerabilities in Web Applications}
+{A. V. Duarte, A. Oke, R. Melo, S. Gandhi, \textbf{N. Kotalwar}, C. Khandor, D. Wang, A. L. Oliveira, C. Ros\'{e}, L. Li.}
+{arXiv:2610.00977\enspace\textperiodcentered\enspace 2026}
+
+\section*{Publications}
+{\small\textit{* Equal contribution.}}
+\paper{https://arxiv.org/abs/2602.16819}
+{Hybrid-Gym: Training Coding Agents to Generalize Across Tasks}
+{Y. Xie, E. Liu, G. Zhang, \textbf{N. Kotalwar}, S. Gandhi, S. Acharya, X. Wang, C. Ros\'{e}, G. Neubig, D. Fried.}
+{ICML 2026}
+\paper{https://openreview.net/forum?id=VLgFkLRUfV}
+{Evaluating Code Slop in Long-Horizon Coding Agents}
+{S. Gandhi*, S. Agarwal*, \textbf{N. Kotalwar*}, A. Naik.}
+{COLM 2026 Workshop on Agent Behavior (WAB)}
+\paper{https://arxiv.org/abs/2606.18413}
+{Searching for Synergy in Shared Workspace Human-AI Collaboration}
+{\textbf{N. Kotalwar}, R. Das, C. Ros\'{e}.}
+{ICML 2026 Workshop on Human-AI Co-Creativity}
+% Keep the 2026 group on page one; continue the list without repeating its heading.
+\newpage
+\paper{https://arxiv.org/abs/2511.02966}
+{Inference-Time Personalized Alignment with a Few User Preference Queries}
+{V. A. P\u{a}durean, P. Kamalaruban, \textbf{N. Kotalwar}, A. Gotovos, A. Singla.}
+{NeurIPS 2025}
+\paper{https://educationaldatamining.org/EDM2025/proceedings/2025.EDM.short-papers.35/2025.EDM.short-papers.35.pdf}
+{Humanizing Automated Programming Feedback: Fine-Tuning Generative Models with Student-Written Feedback}
+{V. A. P\u{a}durean, T. Phung, \textbf{N. Kotalwar}, M. Liut, J. Leinonen, P. Denny, A. Singla.}
+{Educational Data Mining (EDM) 2025}
+\paper{https://arxiv.org/abs/2406.05053}
+{Hints-In-Browser: Benchmarking Language Models for Programming Feedback Generation}
+{\textbf{N. Kotalwar}, A. Gotovos, A. Singla.}
+{NeurIPS 2024 Datasets \& Benchmarks Track}
+
+\section*{Projects}
+\begin{entry}
+\dated{Hints-In-Browser}{2024}
+In-browser LLM feedback generation for programming education. Built a web platform and trained compact language models to deliver local programming feedback to students, avoiding server-side code submission for privacy and cost benefits. \href{https://hints-in-browser.netlify.app/}{Demo}\enspace\textperiodcentered\enspace\href{https://github.com/machine-teaching-group/neurips2024-hints-in-browser-finetuning}{Code}
+\end{entry}
+\begin{entry}
+\dated{BlocksAndPython}{2022 -- 2023}
+Visual programming platform for K-12 Python education. Designed and developed a platform for learning Python and block-based programming, used in research studies and by educators across schools in Estonia. Presented at the Google Blockly Summit, 2024. \href{https://www.blocksandpython.org}{Platform}
+\end{entry}
+
+\section*{Teaching Positions}
+\teaching{\textbf{Foundations of Computational Data Science}, CMU, Teaching Assistant.}{2026}
+\teaching{\textbf{Generative AI}, MPI-SWS, Teaching Assistant.}{2024 -- 2025}
+\teaching{\textbf{Code in Place}, Stanford University (Remote), Section Leader.}{2024}
+\teaching{\textbf{Microprocessors and Interfacing}, BITS Pilani, Teaching Assistant.}{2022}
+\teaching{\textbf{Object Oriented Programming}, BITS Pilani, Teaching Assistant.}{2021}
+\teaching{\textbf{Postman Classroom Program}, BITS Postman Lab, Teaching Assistant.}{2021}
+
+\section*{Academic Service}
+\textbf{Program Committee:} CHI 2027; NeurIPS 2025, 2026; Educational Data Mining (EDM) 2026; ICML 2026 Workshop on Human-AI Co-Creativity.
+
+\section*{Awards \& Fellowships}
+\begin{entry}
+\dated{Amazon Nova AI Challenge: Trusted Software Agents}{2026}
+Selected to co-lead Carnegie Mellon University's team, one of 10 university teams chosen worldwide, supported by a \$250K research grant.
+\end{entry}
+\begin{entry}
+\dated{Undergraduate Research Fellowship, Max Planck Institute for Software Systems}{2024}
+Selected for a fully funded undergraduate thesis research visit in Germany.
+\end{entry}
+\begin{entry}
+\dated{BITS Merit Scholarship}{2020 -- 2024}
+Awarded a \$24,000 full undergraduate tuition scholarship for consistently ranking in the top 1\%.
+\end{entry}
+
+\section*{Skills}
+\textbf{Programming:} Python, C/C++, TypeScript/JavaScript, Bash, SQL\par
+\textbf{Tools:} PyTorch, Hugging Face Transformers, vLLM, verl, NumPy, Pandas, FastAPI, Flask, Django, Node.js, React, Docker, Git
+\end{document}
