@@ -8,8 +8,8 @@
     button.setAttribute('aria-label', theme === 'dark' ? 'Switch to light mode' : 'Switch to dark mode');
   }
 
-  let theme = 'light';
-  try { theme = localStorage.getItem('theme') === 'dark' ? 'dark' : 'light'; } catch (_) {}
+  let theme = 'dark';
+  try { theme = localStorage.getItem('theme') === 'light' ? 'light' : 'dark'; } catch (_) {}
   applyTheme(theme);
 
   button.addEventListener('click', () => {
