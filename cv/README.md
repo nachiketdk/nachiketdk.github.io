@@ -36,7 +36,7 @@ The page arrangement is deliberate: page 1 contains contact information, educati
 - Use `nkotalwa@cs.cmu.edu` as the single contact email across the CV and website.
 - GPA notation is approved as written, including 4.06/4.
 - Teaching includes Foundations of Computational Data Science, CMU, Teaching Assistant, 2026.
-- Program committee service includes CHI 2027.
+- Use "Reviewing" for all listed conference and workshop service under Academic Service, including CHI 2027.
 - Research Mentoring lists Partha Sarathi Purkayastha, ETH Zürich, and Rohini Das, Carnegie Mellon University. Dates and degree levels have not been supplied; do not infer them.
 - The Amazon entry uses the Trusted Software Agents challenge name, co-leadership of Carnegie Mellon University's team, selection among 10 university teams worldwide, and a $250,000 research grant. Omit the team name and AWS credits.
 - Write monetary amounts in full with comma separators: $250,000 for the research grant and $24,000 for the BITS Merit Scholarship. Do not abbreviate amounts with K.
