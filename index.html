@@ -13,8 +13,9 @@
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="favicon.svg">
   <link rel="manifest" href="favicon/site.webmanifest">
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css?v=2">
   <script src="theme.js" defer></script>
+  <script src="portrait.js" defer></script>
 </head>
 <body>
   <div class="site-shell">
@@ -32,7 +33,12 @@
           <h1>Nachiket Kotalwar</h1>
           <p class="affiliation">PhD student · Carnegie Mellon University</p>
         </div>
-        <img class="portrait" src="images/square_img.jpg" width="150" height="150" alt="Nachiket Kotalwar" title="Lake Brienz, Interlaken">
+        <div class="portrait-container">
+          <button class="portrait-trigger" type="button" aria-describedby="portrait-location">
+            <img class="portrait" src="images/square_img.jpg" width="150" height="150" alt="Nachiket Kotalwar">
+          </button>
+          <span class="portrait-tooltip" id="portrait-location" role="tooltip"><span>Lake Brienz, Interlaken</span></span>
+        </div>
         <div class="profile-details">
           <p class="contact"><a href="mailto:nkotalwa@cs.cmu.edu">nkotalwa@cs.cmu.edu</a></p>
           <nav class="profile-links" aria-label="Profile links">
