@@ -29,7 +29,7 @@ The page arrangement is deliberate: page 1 contains contact information, educati
 - Experience entries use a bold role, an italic institution name, and a 3-point gap before the regular-text description. Keep the existing text size and monochrome style.
 - Preprints precede Publications. The first-authored tutoring preprint leads; remaining preprints follow by recency.
 - Publications are grouped by descending year, with full conference papers before workshop papers within each year.
-- Preserve paper author order and mark equal contributions. Workshop and special-track labels remain explicit in the CV and full website bibliography. The user explicitly prefers the compact label "NeurIPS 2024" for Hints-In-Browser on the homepage.
+- Preserve paper author order and mark equal contributions. Workshop and special-track labels remain explicit except for Hints-In-Browser, which uses "NeurIPS 2024" in the CV, homepage, and full website bibliography.
 - Homepage workshop labels are "ICML 2026 Workshop" and "COLM 2026 Workshop". The CV and full bibliography use "ICML 2026 Workshop on Human-AI Co-Creativity" and "COLM 2026 Workshop on Agent Behavior (WAB)". Keep conference/year punctuation consistent.
 - Paper titles are bold black text. The PDF has no clickable links, colored text, underlines, or separate Demo/Code/Platform link labels. Preprints display arXiv IDs and years.
 - Contact information is exactly two plain-text lines: `nkotalwa@cs.cmu.edu`, then `nachiketdk.github.io`. Google Scholar, GitHub, and LinkedIn remain on the website and are omitted from the CV.
