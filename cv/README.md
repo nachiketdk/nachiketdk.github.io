@@ -25,7 +25,8 @@ The page arrangement is deliberate: page 1 contains contact information, educati
 - The two research themes are Human-AI interaction and Agent capabilities and reliability. They overlap; system development, training, and evaluation are activities across both themes. The general goal is to enable effective human-AI collaboration.
 - Keep the general research directions and goal separate from examples of applications. The Research Interests paragraph reflecting the approved themes is: "I study human-AI interaction and the capabilities and reliability of AI agents. My goal is to enable effective human-AI collaboration. Applications of my work include AI-assisted software engineering and STEM education."
 - Application examples are non-exhaustive: AI-assisted software engineering and STEM education. Scientific research is an ongoing direction and is omitted from the current CV and website. The website puts the research focus and collaboration goal in the introduction, then presents application examples separately after the research directions and paper links.
-- The CMU experience description is conceptual: learning, personalization, and coordination for effective human-AI collaboration.
+- The CMU experience description is conceptual: "Human-AI collaboration, and evaluation and training of AI agents." (approved 2026-11-19).
+- The website names the second theme "Reliable AI agents" (heading and bio, approved 2026-11-19); the CV Research Interests and the site meta description still use "capabilities and reliability of AI agents".
 - Experience entries use a bold role, an italic institution name, and a 3-point gap before the regular-text description. Keep the existing text size and monochrome style.
 - Preprints precede Publications. The first-authored tutoring preprint leads; remaining preprints follow by recency.
 - Publications are grouped by descending year, with full conference papers before workshop papers within each year.
