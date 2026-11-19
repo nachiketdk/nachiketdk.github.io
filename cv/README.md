@@ -23,7 +23,7 @@ The page arrangement is deliberate: page 1 contains contact information, educati
 ## Approved content and design
 
 - The two research themes are Human-AI interaction and Reliable AI agents (renamed from "Agent capabilities and reliability" on 2026-11-19). They overlap; system development, training, and evaluation are activities across both themes. The general goal is to enable effective human-AI collaboration.
-- Keep the general research directions and goal separate from examples of applications. The Research Interests paragraph reflecting the approved themes is: "I study human-AI interaction and reliable AI agents to enable effective human-AI collaboration. Applications of my work include AI-assisted software engineering and STEM education."
+- Keep the general research directions and goal separate from examples of applications. The Research Interests paragraph reflecting the approved themes is: "My research focuses on human-AI interaction and reliable AI agents to enable effective human-AI collaboration. Applications of my work include AI-assisted software engineering and STEM education."
 - Application examples are non-exhaustive: AI-assisted software engineering and STEM education. Scientific research is an ongoing direction and is omitted from the current CV and website. The website puts the research focus and collaboration goal in the introduction, then presents application examples separately after the research directions and paper links.
 - The CMU experience description is conceptual: "Human-AI collaboration, and evaluation and training of AI agents." (approved 2026-11-19).
 - "Reliable AI agents" is used consistently in the website heading, bio, meta description, and CV Research Interests (approved 2026-11-19).
